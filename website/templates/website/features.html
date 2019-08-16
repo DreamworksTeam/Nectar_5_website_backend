@@ -1,0 +1,87 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+
+<!-- Title Section -->
+{% block title %} Nectar 5 - Features {% endblock %}
+
+<!-- Content Section -->
+{% block content %}
+<div class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/features.jpg' %}); background-position: center; background-repeat: no-repeat; background-size: cover;" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row no-gutters d-flex slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" style="color: #fff;">Effective Features</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="ftco-section ftco-services" style="padding-top: 0 !important;">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+            <h3 class="mt-5"> Five Cardinal Features of Nectar 5</h3>
+        </div>
+
+
+        <div class="container mb-4">
+            <div class="row equal mb-4 row-flex row-eq-height">
+                <div class="col-sm-12 col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">DATA ON DEMAND</h5>
+                            <p class="card-text">Get your real time data for a real world online and offline</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">MEANINGFUL DATA</h5>
+                            <p class="card-text">Gather useful and meaningful data using Android and IOS devices</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">MULTINATIONAL FEATURES</h5>
+                            <p class="card-text">Offline, Online, automatic updates, data visualization and analytics etc</p>                                </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col"></div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">SMART AND VALID DATA</h5>
+                            <p class="card-text">The survey-quality mapping app with unique geo-location features enables you to establish origin of data</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">DATA VISUALIZATION & ANALYTICS</h5>
+                            <p class="card-text">Data analysis informs breathtaking visualization tools to yield actionable results and decision making</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col"></div>
+              
+            </div>
+
+        </div>                
+    </div>
+
+</section>
+
+{% endblock %}
+
+

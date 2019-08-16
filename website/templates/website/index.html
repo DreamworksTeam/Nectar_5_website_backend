@@ -1,0 +1,431 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nectar 5</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/nectar_logo.png' %}" width="80"
+                    height="80"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="color: #fff !important;"><a href="{% url 'at-a-glance' %}"
+                            class="nav-link">At a glance</a></li>
+                    <li class="nav-item"><a href="{% url 'how-it-works' %}" class="nav-link">How it works</a></li>
+                    <li class="nav-item"><a href="{% url 'features' %}" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'support' %}">Support</a></li>
+                    <li class="nav-item"><a href="{% url 'contact-us' %}" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item cta"><a href="login.html" class="nav-link header-btn"><span>Login</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap" style="background: url({% static 'images/download.jpg' %})">
+        <video autoplay muted loop id="myVideo" style="height: 500px !important;">
+            <source src="{% static 'images/back_video.mp4' %}" type="video/mp4">
+        </video>
+        <div class=""></div>
+        <div class="header-overlay"></div>
+
+
+        <div class="container-fluid">
+            <div class="slider-text d-md-flex align-items-center" data-scrollax-parent="true">
+
+                <div class="one-forth ftco-animate align-self-md-center"
+                    data-scrollax=" properties: { translateY: '70%' }">
+                    <h1 class="mb-4"> Nectar 5 for
+                        <strong class="typewrite" data-period="4000"
+                            data-type='[ "Data Visualization", "Data Analytics", "Data Aggregation" ]'>
+                            <span class="wrap"></span>
+                        </strong>
+                    </h1>
+                    <p class="mb-md-5 mb-sm-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Your Foremost digital bank.</p>
+                    <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="{% url 'get-started' %}"
+                            class="btn btn-primary px-4 py-3 header-btn mr-3">Get Started</a> <a href="Get_paid.html"
+                            class="btn header-btn2 btn-primary  btn-outline-primary px-4 py-3">Get Paid</a></p>
+                </div>
+                <!-- <div class="one-half align-self-md-end align-self-sm-center">
+                    <img src="{% static 'images/mockup.png' %}" class="img-fluid img"
+                        style=" width: 45% !important; display: block; margin: auto; margin-bottom: 70px;">
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section ftco-section-2">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3 class="heading-white" style="text-align: center; ">
+                        <center>Simply the Best Data Collection and Visualization App out there</center>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-services">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 text-center heading-section ftco-animate">
+                    <h2 class="mb-2">Best Features of Nectar 5</h2>
+                    <span class="subheading">Search Engine &amp; Social Media Optimization Experts</span>
+                </div>
+            </div>
+            <!--          Features row ICON-->
+            <div class="row">
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <img src="{% static 'images/icons/icons8-natural-user-interface-2-50.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">Provides an intuitive interface with icons and buttons</h3>
+                            <!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <!--                                    <span class="flaticon-creativity"></span>-->
+                                <img src="{% static 'images/icons/icons8-data-transfer-32.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">Faster Data Collection</h3>
+                            <!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <!--                                    <span class="flaticon-market"></span>-->
+                                <img src="{% static 'images/icons/icons8-phonelink-ring-80.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">Turn paper into mobile forms</h3>
+                            <!--                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <img src="{% static 'images/icons/icons8-paper-50.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">Turn inspections into mobile forms</h3>
+                            <!--                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <!--                                    <span class="flaticon-creativity"></span>-->
+                                <img src="{% static 'images/icons/icons8-zip-64.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">No form is too large or complicated</h3>
+                            <!--                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <!--                                    <span class="flaticon-market"></span>-->
+                                <img src="{% static 'images/icons/icons8-data-backup-64.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">Dispatch with tracking</h3>
+                            <!--                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <img src="{% static 'images/icons/icons8-tracking-80.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">Workflow with rules</h3>
+                            <!--                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <!--                                    <span class="flaticon-creativity"></span>-->
+                                <img src="{% static 'images/icons/icons8-workflow-64.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">Professional PDF &amp; Word Reports</h3>
+                            <!--                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <!--                                    <span class="flaticon-market"></span>-->
+                                <img src="{% static 'images/icons/icons8-export-pdf-80.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">Integrated database tables</h3>
+                            <!--                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <img src="{% static 'images/icons/icons8-database-export-80.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">Online &amp; Offline data collection</h3>
+                            <!--                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <!--                                    <span class="flaticon-creativity"></span>-->
+                                <img src="{% static 'images/icons/icons8-cloud-storage-64.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">Cloud storage or direct post</h3>
+                            <!--                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-block text-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="icon">
+                                <!--                                    <span class="flaticon-market"></span>-->
+                                <img src="{% static 'images/icons/icons8-enter-key-50.png' %}">
+                            </div>
+                        </div>
+                        <div class="media-body p-2 mt-3">
+                            <h3 class="heading">Works on iOS and Android</h3>
+                            <!--                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!--          End Features-->
+        </div>
+        <div class="container-wrap mt-5">
+            <div class="row d-flex no-gutters">
+                <div class="col-sm-12 col-md-6 img ftco-animate">
+                    <img class="img-fluid img" width="300px" height="300px" src="{% static 'images/mobile-mockup.png' %}"
+                        style="margin: auto; display: block;">
+                </div>
+                <div class="col-sm-12 col-md-6 d-flex">
+                    <div class="services-wrap">
+                        <div class="heading-section mb-5 ftco-animate">
+                            <h2 class="mb-2">Data Collection &amp; Survey in a Snap from Mobile App</h2>
+                         
+                            <a href="{% url 'get-started' %}"
+                                class="btn mt-4  header-btn btn-primary  btn-outline-primary px-4 py-3">Get Started</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-counter img" id="section-counter"
+        style="background-image: url({% static 'images/data_findings.png' %});"
+        data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row d-flex no-gutters">
+                <div class="col-md-6 d-flex">
+                    <div class="services-wrap">
+                        <div class="heading-section mb-2 ftco-animate">
+                            <h2 class="mb-2" style="color: #fff;">Data Collection &amp; Survey in a Snap from Web-based
+                                App</h2>
+                            
+                            <a href="{% url 'get-started' %}"
+                                class="btn mt-4  header-btn btn-primary  btn-outline-primary px-4 py-3">Get Started</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 img ftco-animate">
+                    <img class="img-fluid img" width="500px" height="300px" src="{% static 'images/laptop-mockup.png' %}"
+                        style="margin: auto; display: block;">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-work">
+        <div class="container-fluid">
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 text-center heading-section ftco-animate">
+                    <h2 class="mb-2">Our Clients</h2>
+                    <span class="subheading">Our Happy Clients</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-sm-12 col-md-7">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2"> Nectar 5.</h2>
+
+                    </div>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-12 col-md-5 pr-md-4">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Download Apps</h2>
+                        <a href="https://itunes.apple.com/"> <img class="img-fluid"
+                                src="{% static 'images/appstore.png' %}" width="200" height="50"> </a>
+                        <img class="img-fluid" src="{% static 'images/google-play.png' %}" width="200" height="90">
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 text-center">
+
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved Nectar 5. Powered
+                        by <a href="http://dreamworkslimited.com" target="_blank">Dreamworks System Solutions
+                            Limited</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" /></svg></div>
+
+
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+    <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+    <script src="{% static 'js/scrollax.min.js' %}"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="{% static 'js/google-map.js' %}"></script>
+    <script src="{% static 'main.js' %}"></script>
+
+</body>
+
+</html>

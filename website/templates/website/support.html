@@ -1,0 +1,149 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+<!-- title section -->
+{% block title %} Nectar 5 - Support {% endblock %}
+
+
+<!-- Content Section -->
+{% block content %}
+<div class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/people-collect-data.jpg' %}); background-position: center; background-repeat: no-repeat; background-size: cover;" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row no-gutters d-flex slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" style="color: #fff;">Support</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="ftco-section ftco-services" style="padding-top: 0 !important; background-color: #ececec;">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+        </div>
+        <div class="row">
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center"><div class="icon"><span><img src="{% static 'images/book.png' %}"> </span></div></div>
+                    <div class="media-body p-2 mt-3">
+                        <h3 class="heading">Knowledge Base</h3>
+
+                    </div>
+                </div>      
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <a href="{% url 'faq' %}">
+                    <div class="d-flex justify-content-center"><div class="icon"><span><img src="{% static 'images/faq.png' %}"> </span></div></div>
+                    <div class="media-body p-2 mt-3">
+                        <h3 class="heading">FAQs</h3>
+                        </a>
+
+                    </div>
+                </div>    
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center"><div class="icon"><span><img src="{% static 'images/video.png' %}"> </span></div></div>
+                    <div class="media-body p-2 mt-3">
+                        <h3 class="heading">Video Tutorial</h3>
+
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section contact-section ftco-degree-bg">
+    <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+            <div class="col-md-12 mb-4">
+                <center><h2 class="h4">Request Support</h2></center>
+            </div>
+            <div class="w-100"></div>
+
+        </div>
+        <div class="row block-9">
+            <div class="col-sm-12 col-md-12 pr-md-5">
+                <form action="{% url 'support' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ support_form.full_name| as_crispy_field }}
+                    </div>
+                    <div class="form-group">
+                        {{ support_form.phone|as_crispy_field }}
+                    </div>
+                    <div class="form-group">
+                        {{ support_form.email|as_crispy_field }}
+                    </div>
+                    <div class="form-group">
+                       
+                        {{ support_form.problem|as_crispy_field }}
+                    </div>
+                  
+                    <div class="form-group">
+                        
+                        {{ support_form.complaint|as_crispy_field }}
+                    </div>
+
+                    {% if messages %}
+                    {% for message in messages %}
+                    
+                    <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      {{ message }}
+                    </div>
+                  {% endfor %}
+                    {% endif %}
+                    
+                    <button type="submit" class="btn mt-4  header-btn btn-primary  btn-outline-primary px-4 py-3">Send Feedback</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if messages %}
+<div class="container">
+    <div class="row">
+       
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                    </div>
+
+                    <div class="modal-body">
+                    {% for message in messages %}
+                        <div class="thank-you-pop">
+                            <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                            <h1>Thank You for Contacting Support</h1>
+                            <p>One of our support agents will contact you shortly.</p>
+                            
+
+                        </div>
+                    {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
+
+{% endblock %}

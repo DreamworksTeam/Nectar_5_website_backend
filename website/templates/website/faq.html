@@ -1,0 +1,168 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+
+<!-- title -->
+{% block title %} Nectar 5 - FAQ {% endblock %}
+
+
+<!-- content -->
+{% block content %}
+
+
+<style>
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+      
+      max-width: 1000px;
+    }
+    
+    .active, .accordion:hover {
+      background-color: #ccc;
+    }
+    
+    .accordion:after {
+      content: '\002B';
+      color: #777;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    .active:after {
+      content: "\2212";
+    }
+    
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      max-width: 1000px;
+    }
+    
+    </style>
+
+<div class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/faq.jpeg' %}); background-position: center; background-repeat: no-repeat; background-size: cover;" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row no-gutters d-flex slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" style="color: #fff;"><b>F A Q</b></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h2 style="text-align: center;">FAQs</h2>
+      <button class="accordion">What is Nectar5?</button>
+      <div class="panel">
+            <p>Nectar5 is a product of DreamWorks Systems Solution Limited, a data technology unit that leverages 
+            on real time data to track and simplify macro-economic and human development trends in
+            Nigeria and other African countries. Nectar5 leverages on real time data using a mobile apps
+            and other web tools to build a new approach to collecting human, business and economic data
+            while we analyse such data afterwards to provide insights, which can be used by multinationals,
+            companies, financial services firms in Nigeria and across Africa. It has three main platforms</p>
+            <ol>
+            <li>Mobile data collection</li>
+            <li>Data visualization</li>
+            <li>Data analytics</li>
+          </ol>
+      
+      </div>
+  
+      <button class="accordion">What is Nectar5 used for?</button>
+      <div class="panel">
+        <p>Nectar5 is used in a variety of industries.
+        It can be used to conduct surveys, collect data, track personnel,
+        send emergency alerts, track customer satisfaction, and manage supply chain management.
+        It also be an economic monitoring platform (for tracking inflation, purchasing power,
+        population census, buying habits and sustainable development goals data)
+        and would allow customers to track businesses and economic conditions
+        in real-time across thousands of online and offline locations in Nigeria and Africa.
+        It is used to monitor the prices, quality, availability, and other metrics of goods
+        and services, from online and on-the-ground sources.
+       </p>
+      </div>
+  
+      <button class="accordion">How does it work?</button>
+      <div class="panel">
+        <p>Nectar5 is an online application even though the mobile app can be used offline for data capture.
+        Organizations that require surveys or data capture should contact support team by phone,
+        mail or via our platform (go to support). We also engage field agents for the
+        data capture and they get paid per survey.
+        To be a field agent and get paid, sign up or click on “get paid” on our home page.  </p>
+      </div>
+  
+      <button class="accordion">Can data be collected on Nectar5 without internet connection?</button>
+      <div class="panel">
+        <p>Yes. Data can still be collected using Nectar5
+        mobile if an internet connection is not present,
+        and when the connection is re-established the data
+        that was collected can be uploaded/synchronized to the server.   </p>
+      </div>
+  
+      <button class="accordion">How much does it cost to use Nectar5?</button>
+      <div class="panel">
+        <p>Nectar5 offers three major services i.e. data collection,
+        data visualization and data analytics. You will need to contact our support team via phone
+        and/or mail for proper needs assessment and requirements gathering of your project.
+        All projects include free support and no set up fee.  </p>
+      </div>
+  
+      <button class="accordion">How does Nectar5 save money?</button>
+      <div class="panel">
+        <p>With most technology implementations, the most expensive component is the personnel.
+        With Nectar5, the support team handles the entire data collection setup as
+        well as attend to any other aspects without our clients having to spend money
+        on programmers or technology consultants. This saves an enormous amount of money.
+        Based on research, and a World Bank study concluded that switching from paper-based data
+        collection to Mobile data collection has reduced costs by 71%.  </p>
+      </div>
+  
+      <button class="accordion">Support team available in person or phone?</button>
+      <div class="panel">
+        <p>We have an excellent and experienced customer support team for all users.
+        Support by email is free for all users. Online or on-the-ground training is also available.
+        Just go to support on the homepage navigation bar or email support@nectar5.com.   </p>
+      </div>
+  </div>
+  <div class="col-md-2"></div>
+  </div>
+
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+</script>
+  
+  
+
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+<!-- title section -->
+{% block title %} Nectar 5 - How it Works {% endblock %}
+
+<!-- content section -->
+{% block content %}
+
+<div class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/how-it-works.jpg' %}); background-position: center; background-repeat: no-repeat; background-size: cover;" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row no-gutters d-flex slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" style="color: #fff;">How it Works</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="ftco-section ftco-services" style="padding-top: 0 !important; background-color: #fff;">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+        </div>
+        <div class="row">
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center"><div class="icon"><span> <img class="img-circle" src="{% static 'images/com.steelsoftlab.videomessage.png' %}" width="117px" height="117px" style="border-radius: 50%;" /> </span></div></div>
+                    <div class="media-body p-2 mt-3">
+                        <h5 style="color: #fc9800 !important">STEP 1</h5>
+                        <h3 class="heading">Initiate a Survey/Campaign</h3>
+
+                    </div>
+                </div>      
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center"><div class="icon"><span><img class="img-circle" src="{% static 'images/settingicon.png' %}" width="117px" height="117px" style="border-radius: 50%;" /></span></div></div>
+                    <div class="media-body p-2 mt-3">
+                        <h5 style="color: #fc9800 !important">STEP 2</h5>
+                        <h3 class="heading">Contact Support Team</h3>
+
+                    </div>
+                </div>    
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center"><div class="icon"><span><img class="img-circle" src="{% static 'images/icons-21-2-512.png'%}" width="117px" height="117px" style="border-radius: 50%;" /></span></div></div>
+                    <div class="media-body p-2 mt-3">
+                        <h5 style="color: #fc9800 !important">STEP 3</h5>
+                        <h3 class="heading">Make Payments</h3>
+
+                    </div>
+                </div>      
+            </div>
+        </div>
+            <div class="row">
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center"><div class="icon"><span><img class="img-circle" src="{% static 'images/icons8-double-right-filled-50.png' %}" width="117px" height="117px" style="border-radius: 50%;" /></span></div></div>
+                    <div class="media-body p-2 mt-3">
+                        <h5 style="color: #fc9800 !important">STEP 4</h5>
+                        <h3 class="heading">Survey is Created &amp; Published</h3>
+
+                    </div>
+                </div>      
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center"><div class="icon"><span><img class="img-circle" src="{% static 'images/kisscc0-computer-icons-contact-list-user-email-drawing-user-tasks-lists-5b713712dfba50.3534224415341463229164.png' %}" /> </span></div></div>
+                    <div class="media-body p-2 mt-3">
+                        <h5 style="color: #fc9800 !important" >STEP 5</h5>
+                        <h3 class="heading">Collect Result from Survey</h3>
+
+                    </div>
+                </div>    
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="d-flex justify-content-center"><div class="icon"><span><img class="img-circle" src="{% static 'images/gl.png' %}" width="117px" height="117px" style="border-radius: 50%;" /> </span></div></div>
+                    <div class="media-body p-2 mt-3">
+                        <h5 style="color: #fc9800 !important">STEP 6</h5>
+                        <h3 class="heading">Get Data Analytics / Visualization</h3>
+
+                    </div>
+                </div>      
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+
+
+{% endblock %}

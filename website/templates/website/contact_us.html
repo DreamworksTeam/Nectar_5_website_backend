@@ -1,0 +1,116 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!-- title section -->
+{% block title %} Nectar 5 - Contact Us {% endblock %}
+
+
+<!-- Content Section -->
+{% block content %}
+<div class="hero-wrap hero-wrap-2" style="background-image: url({% static 'images/contact_us.png' %}); background-position: center; background-repeat: no-repeat; background-size: cover;" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row no-gutters d-flex slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" style="color: #fff;">Contact Us</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<section class="ftco-section contact-section ftco-degree-bg">
+    <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+            <div class="col-md-12 mb-4">
+                <h2 class="h4">Contact Support Today</h2>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md-3">
+                <p><span>Address:</span> Block D Sky Memorial, Wuse, Abuja.</p>
+            </div>
+            <div class="col-md-3">
+                <p><span>Phone:</span> <a href="tel://08065662266"></a>08065662266</p>
+            </div>
+            <div class="col-md-3">
+                <p><span>Email:</span> <a href="mailto:info@nectar5.com">info@nectar5.com</a></p>
+            </div>
+
+        </div>
+        <div class="row block-9">
+            <div class="col-sm-12 col-md-12 pr-md-5">
+                <form action="{% url 'contact-us' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ contact_form.full_name|as_crispy_field }}
+                    </div>
+                    <div class="form-group">
+                            {{ contact_form.email|as_crispy_field }}
+                    </div>
+                    <div class="form-group">
+                            {{ contact_form.subject|as_crispy_field }}
+                    </div>
+                    <div class="form-group">
+                            {{ contact_form.message|as_crispy_field }}
+                    </div>
+                    {% if messages %}
+                    {% for message in messages %}
+                    
+                    <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      {{ message }}
+                    </div>
+                  {% endfor %}
+                    {% endif %}
+                    <div class="form-group">
+                        <input type="submit" value="Send Message" class="btn btn-primary header-btn py-3 px-5">
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% if messages %}
+<div class="container">
+    <div class="row">
+       
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                    </div>
+
+                    <div class="modal-body">
+                    {% for message in messages %}
+                        <div class="thank-you-pop">
+                            <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                            <h1>Thanks for contacting us!</h1>
+                            <p>We will be in touch with you shortly.</p>
+                            
+
+                        </div>
+                    {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,286 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!-- title -->
+{% block title %} Nectar 5 - Get Started {% endblock %}
+
+<!-- content -->
+{% block content %}
+
+
+<!--tab pills--->
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        //border: 1px solid #ccc;
+        background-color: #ff9b01;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: white;
+        color: #ff9b01
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: white;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        // border: 1px solid #ccc;
+        border-top: none;
+    }
+
+    /* Style the close button */
+    .topright {
+        float: right;
+        cursor: pointer;
+        font-size: 28px;
+    }
+
+    .topright:hover {
+        color: red;
+    }
+</style>
+
+
+
+<body>
+
+
+
+    <div class="hero-wrap hero-wrap-2"
+        style="background-image: url({% static 'images/Starting-point.jpg' %}); background-position: center; background-repeat: no-repeat; background-size: cover;"
+        data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+            <div class="row no-gutters d-flex slider-text align-items-center justify-content-center"
+                data-scrollax-parent="true">
+                <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+
+                    <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
+                        style="color: #fff;">Getting Started</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">DATA COLLECTION</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">FIELD AGENTS</button>
+    </div>
+
+    <div id="London" class="tabcontent" style="padding: 0px 20px 0px 20px">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+
+        <h5 class="mt-5">OUR FIELD AGENTS AND DATA COLLECTION</h5>
+        <p>At Nectar5, we use proprietary recruiting techniques to grow and sustain a network of local residents
+            peculiar to any environment. If our field agents (mobile workforce) are already in place where your study is
+            situated, your data acquisition campaign will commence in as little as 24-48 hours. For regions where our
+            field agents (mobile workforce) are not available, recruitment and training of a new network is achieved in
+            2-3 weeks almost anywhere in the world.</p>
+
+        <h5>DATA COLLECTION DESIGN</h5>
+        <p>Our Support team build campaigns, surveys and tasks and localization where required. Our data science team is
+            experienced in setting up campaigns, surveys and data collection to minimize bias and error.</p>
+
+        <h5>TASK ALLOCATION</h5>
+        <p>We work with customers to launch tasks into the marketplace based on desired campaign objectives using
+            demographic and geographic targeting techniques.</p>
+
+        <h5>QUALITY CONTROL </h5>
+        <p>Survey findings are processed with a combination of manual and automatic quality control and fraud detection
+            processes to verify that findings meet specified requirements and mitigate attempts to ‘game the system’.
+            Field Agents are paid for their findings based on task complexity, degree of difficulty, duration or other
+            valuation.</p>
+
+        <h5>DATA ANALYTICS & VISUALIZATION</h5>
+        <p>Data is presented in charts, graphs, and maps for clear, rapid presentation available for immediate sharing.
+            Data sets are also available for download or may be accessed through an API depending on the arrangement
+            with our highly esteemed clients.</p>
+
+        <h5>TASK EVALUATION</h5>
+        <p>We are constantly learning from the campaigns we have run and use the knowledge gained in each unique
+            collection task to continuously improve our data collection and quality control processes and to introduce
+            new features into the Portal and Mobile App.</p>
+        <div class="col-md-12">
+            <h1>
+                Join Our Mobile Workforce
+
+            </h1>
+
+            <form action="{% url 'get-started' %}" method="POST">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    {{ get_started_form.organization | as_crispy_field }}
+                </div>
+
+                <div class="form-group">
+                    {{ get_started_form.email | as_crispy_field }}
+                </div>
+                <div class="form-group">
+                    {{ get_started_form.phone | as_crispy_field }}
+                </div>
+                <div class="form-group">
+                    {{ get_started_form.location | as_crispy_field }}
+                </div>
+                <div class="form-group">
+                    {{ get_started_form.entry | as_crispy_field }}
+                </div>
+
+                <button type="submit" class="btn btn-primary pt-2 pb-2" style="background-color: #FF9B00; border-color: #FF9B00;">Submit</button>
+
+            
+            </form>
+            <br>
+            {% if messages %}
+            {% for message in messages %}
+            
+            <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              {{ message }}
+            </div>
+          {% endfor %}
+            {% endif %}
+
+
+            {% if messages %}
+<div class="container">
+    <div class="row">
+       
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                    </div>
+
+                    <div class="modal-body">
+                    {% for message in messages %}
+                        <div class="thank-you-pop">
+                            <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                            <h1>Thank You for submitting your request</h1>
+                            <p>One of our support agents will contact you shortly.</p>
+                            
+
+                        </div>
+                    {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
+
+            
+           
+        </div>
+
+    </div>
+
+
+
+    <div id="Paris" class="tabcontent" style="padding: 0px 30px 0px 30px">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+
+        <h5 class="mt-5">Do you wish to Join our Mobile Workforce (Field Agents)?</h5>
+        <p>We recruit data contributors depending on the data collection location. At Nectar5, we use proprietary
+            recruiting techniques to grow and sustain a network of local residents peculiar to any environment. You will
+            also find on our sign up page that we require the complete details on every contributor for the purpose of
+            data security. Below are the steps in joining our mobile workforce:</p>
+        <p>1. Sign up to Complete the Field Agent profile.
+            <p>2. Our Support Team will send your login credentials upon completion of your registration and
+                verification of the validity of information provided. </p>
+            <p>3. You are required to download the Mobile APP.</p>
+            <p>4. Login in using your “Login details”.</p>
+            <p>5. Check your dashboard to participate in data collection.</p>
+            <p>6. Review Instructions, Perform Tasks and Submit data collected</p>
+            <p>7. Submit data collected</p>
+            <p>8. Receive Payment</p>
+            <p>To Register as a field Agent
+            </p>
+            <button type="submit" class="btn btn-primary mt-2 mb-2"
+                style="background-color:darkgoldenrod;">Click</button>
+
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+{% endblock %}
